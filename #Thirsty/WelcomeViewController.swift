@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
 
 class WelcomeViewController: UIViewController {
     
+    private typealias `Self` = WelcomeViewController
+    
+    static var userProfile = UserProfile()
+    static var rootDB: FIRDatabaseReference!
+    static var userDB: FIRDatabaseReference!
+    static var purityDB: FIRDatabaseReference!
+    static var sourceDB: FIRDatabaseReference!
     var didRegisterSuccessfully = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +29,16 @@ class WelcomeViewController: UIViewController {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 157/255, green: 191/255, blue: 1.00, alpha: 1.00)
+        
+        // testing putting something in database:
+        
+        Self.rootDB = FIRDatabase.database().reference()
+        Self.userDB = Self.rootDB.child("User Accounts iOS")
+        Self.purityDB = Self.rootDB.child("Water Purity iOS")
+        Self.sourceDB = Self.rootDB.child("Water Source iOS")
+        
+//        let childValues = ["newUser": "omar", "newPassword": "password"]
+//        Self.userDB.updateChildValues(childValues)
         
     }
     
@@ -35,6 +56,7 @@ class WelcomeViewController: UIViewController {
         //self.navController.navigationBar.backItem?.setHidesBackButton(true, animated: true)
         self.navigationController!.navigationBar.backItem?.setHidesBackButton(true, animated: true)
         super.viewWillAppear(animated)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

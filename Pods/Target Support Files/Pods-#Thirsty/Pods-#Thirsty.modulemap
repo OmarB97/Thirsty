@@ -1,0 +1,6 @@
+framework module Pods__Thirsty {
+  umbrella header "Pods-#Thirsty-umbrella.h"
+
+  export *
+  module * { export * }
+}

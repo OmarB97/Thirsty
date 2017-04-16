@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46D0DFEC5DA28AEAF08AD5C1 /* Pods__Thirsty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF68520AB9C60040B8F35746 /* Pods__Thirsty.framework */; };
 		F0287EF61E783FF90025FE04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287EF51E783FF90025FE04 /* AppDelegate.swift */; };
 		F0287EF81E783FF90025FE04 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287EF71E783FF90025FE04 /* WelcomeViewController.swift */; };
 		F0287EFB1E783FF90025FE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0287EF91E783FF90025FE04 /* Main.storyboard */; };
@@ -15,9 +16,14 @@
 		F0287F081E784BB40025FE04 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287F071E784BB40025FE04 /* RegisterViewController.swift */; };
 		F0287F0A1E784BE00025FE04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287F091E784BE00025FE04 /* LoginViewController.swift */; };
 		F0287F0C1E78D4260025FE04 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287F0B1E78D4260025FE04 /* HomeViewController.swift */; };
+		F090A2761EA0116600F74682 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090A2751EA0116600F74682 /* UserProfile.swift */; };
+		F0EF688E1E95CDE000B5766C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0EF688D1E95CDE000B5766C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		480A75B3AC9FB6669023669D /* Pods-#Thirsty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#Thirsty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-#Thirsty/Pods-#Thirsty.debug.xcconfig"; sourceTree = "<group>"; };
+		A5418780B95F0E0E06B4A5F6 /* Pods-#Thirsty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#Thirsty.release.xcconfig"; path = "Pods/Target Support Files/Pods-#Thirsty/Pods-#Thirsty.release.xcconfig"; sourceTree = "<group>"; };
+		DF68520AB9C60040B8F35746 /* Pods__Thirsty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__Thirsty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0287EF21E783FF90025FE04 /* #Thirsty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "#Thirsty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0287EF51E783FF90025FE04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0287EF71E783FF90025FE04 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +34,8 @@
 		F0287F071E784BB40025FE04 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0287F091E784BE00025FE04 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F0287F0B1E78D4260025FE04 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F090A2751EA0116600F74682 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F0EF688D1E95CDE000B5766C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D0DFEC5DA28AEAF08AD5C1 /* Pods__Thirsty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		839EE8451ABBAEB71B64DBBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF68520AB9C60040B8F35746 /* Pods__Thirsty.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB88BC664A6EB40B5EE9ADA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				480A75B3AC9FB6669023669D /* Pods-#Thirsty.debug.xcconfig */,
+				A5418780B95F0E0E06B4A5F6 /* Pods-#Thirsty.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0287EE91E783FF90025FE04 = {
 			isa = PBXGroup;
 			children = (
 				F0287EF41E783FF90025FE04 /* #Thirsty */,
 				F0287EF31E783FF90025FE04 /* Products */,
+				AB88BC664A6EB40B5EE9ADA1 /* Pods */,
+				839EE8451ABBAEB71B64DBBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +88,7 @@
 		F0287EF41E783FF90025FE04 /* #Thirsty */ = {
 			isa = PBXGroup;
 			children = (
+				F0EF688D1E95CDE000B5766C /* GoogleService-Info.plist */,
 				F0287EF51E783FF90025FE04 /* AppDelegate.swift */,
 				F0287EF71E783FF90025FE04 /* WelcomeViewController.swift */,
 				F0287F071E784BB40025FE04 /* RegisterViewController.swift */,
@@ -69,6 +98,7 @@
 				F0287EFC1E783FF90025FE04 /* Assets.xcassets */,
 				F0287EFE1E783FF90025FE04 /* LaunchScreen.storyboard */,
 				F0287F011E783FF90025FE04 /* Info.plist */,
+				F090A2751EA0116600F74682 /* UserProfile.swift */,
 			);
 			path = "#Thirsty";
 			sourceTree = "<group>";
@@ -80,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0287F041E783FF90025FE04 /* Build configuration list for PBXNativeTarget "#Thirsty" */;
 			buildPhases = (
+				9073BBCE0C72D5F64C688CE9 /* [CP] Check Pods Manifest.lock */,
 				F0287EEE1E783FF90025FE04 /* Sources */,
 				F0287EEF1E783FF90025FE04 /* Frameworks */,
 				F0287EF01E783FF90025FE04 /* Resources */,
+				7EF91A9ABB8405A3BA70583D /* [CP] Embed Pods Frameworks */,
+				28E53A7B77B4AAA595F3D106 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,12 +167,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0287F001E783FF90025FE04 /* LaunchScreen.storyboard in Resources */,
+				F0EF688E1E95CDE000B5766C /* GoogleService-Info.plist in Resources */,
 				F0287EFD1E783FF90025FE04 /* Assets.xcassets in Resources */,
 				F0287EFB1E783FF90025FE04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28E53A7B77B4AAA595F3D106 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-#Thirsty/Pods-#Thirsty-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EF91A9ABB8405A3BA70583D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-#Thirsty/Pods-#Thirsty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9073BBCE0C72D5F64C688CE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0287EEE1E783FF90025FE04 /* Sources */ = {
@@ -148,6 +230,7 @@
 			files = (
 				F0287F0C1E78D4260025FE04 /* HomeViewController.swift in Sources */,
 				F0287F0A1E784BE00025FE04 /* LoginViewController.swift in Sources */,
+				F090A2761EA0116600F74682 /* UserProfile.swift in Sources */,
 				F0287F081E784BB40025FE04 /* RegisterViewController.swift in Sources */,
 				F0287EF81E783FF90025FE04 /* WelcomeViewController.swift in Sources */,
 				F0287EF61E783FF90025FE04 /* AppDelegate.swift in Sources */,
@@ -269,6 +352,7 @@
 		};
 		F0287F051E783FF90025FE04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 480A75B3AC9FB6669023669D /* Pods-#Thirsty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P7X97BW2EQ;
@@ -282,6 +366,7 @@
 		};
 		F0287F061E783FF90025FE04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5418780B95F0E0E06B4A5F6 /* Pods-#Thirsty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P7X97BW2EQ;
