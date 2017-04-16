@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var loginSuccessful = false
+    private var loginSuccessful = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
