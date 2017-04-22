@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     
     
@@ -24,6 +24,14 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.title = "Register"
+        usernameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPassTextField.delegate = self
+        usernameTextField.tag = 0
+        emailTextField.tag = 1
+        passwordTextField.tag = 2
+        confirmPassTextField.tag = 3
 
         // Do any additional setup after loading the view.
     }
@@ -35,6 +43,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerRequested(_ sender: Any) {
+        self.view.endEditing(true)
         // check if all things are filled out, then check to see if all are valid
         if usernameTextField.text?.characters.count == 0 || emailTextField.text?.characters.count == 0 || passwordTextField.text?.characters.count == 0 || confirmPassTextField.text?.characters.count == 0 {
             displayError(for: nil, error: "One or more text fields are empty.")
@@ -92,6 +101,16 @@ class RegisterViewController: UIViewController {
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            return true;
+        }
+        return false
     }
 
 }

@@ -16,9 +16,31 @@
 		F0287F081E784BB40025FE04 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287F071E784BB40025FE04 /* RegisterViewController.swift */; };
 		F0287F0A1E784BE00025FE04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287F091E784BE00025FE04 /* LoginViewController.swift */; };
 		F0287F0C1E78D4260025FE04 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0287F0B1E78D4260025FE04 /* HomeViewController.swift */; };
+		F067C03A1EA829E4003625D1 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067C0391EA829E4003625D1 /* CustomSegue.swift */; };
+		F06878C61EAA88F9001DBD54 /* UnwindCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878C51EAA88F9001DBD54 /* UnwindCustomSegue.swift */; };
+		F06878CD1EAA967C001DBD54 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878CC1EAA967C001DBD54 /* EmailViewController.swift */; };
+		F06878CF1EAA9687001DBD54 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878CE1EAA9687001DBD54 /* PassViewController.swift */; };
+		F0828FEA1EA8579A008505C8 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0828FE91EA8579A008505C8 /* DropDown.framework */; };
+		F0828FEB1EA8579A008505C8 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0828FE91EA8579A008505C8 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0828FEE1EA85884008505C8 /* SubmitWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0828FED1EA85884008505C8 /* SubmitWaterViewController.swift */; };
+		F0908FB01EA453A80074F8D6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0908FAF1EA453A80074F8D6 /* ProfileViewController.swift */; };
 		F090A2761EA0116600F74682 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090A2751EA0116600F74682 /* UserProfile.swift */; };
 		F0EF688E1E95CDE000B5766C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0EF688D1E95CDE000B5766C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F0828FEC1EA8579A008505C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F0828FEB1EA8579A008505C8 /* DropDown.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		480A75B3AC9FB6669023669D /* Pods-#Thirsty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-#Thirsty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-#Thirsty/Pods-#Thirsty.debug.xcconfig"; sourceTree = "<group>"; };
@@ -34,6 +56,13 @@
 		F0287F071E784BB40025FE04 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0287F091E784BE00025FE04 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F0287F0B1E78D4260025FE04 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F067C0391EA829E4003625D1 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		F06878C51EAA88F9001DBD54 /* UnwindCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindCustomSegue.swift; sourceTree = "<group>"; };
+		F06878CC1EAA967C001DBD54 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		F06878CE1EAA9687001DBD54 /* PassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
+		F0828FE91EA8579A008505C8 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0828FED1EA85884008505C8 /* SubmitWaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubmitWaterViewController.swift; path = ../SubmitWaterViewController.swift; sourceTree = "<group>"; };
+		F0908FAF1EA453A80074F8D6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F090A2751EA0116600F74682 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		F0EF688D1E95CDE000B5766C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D0DFEC5DA28AEAF08AD5C1 /* Pods__Thirsty.framework in Frameworks */,
+				F0828FEA1EA8579A008505C8 /* DropDown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +83,7 @@
 		839EE8451ABBAEB71B64DBBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0828FE91EA8579A008505C8 /* DropDown.framework */,
 				DF68520AB9C60040B8F35746 /* Pods__Thirsty.framework */,
 			);
 			name = Frameworks;
@@ -90,15 +121,21 @@
 			children = (
 				F0EF688D1E95CDE000B5766C /* GoogleService-Info.plist */,
 				F0287EF51E783FF90025FE04 /* AppDelegate.swift */,
-				F0287EF71E783FF90025FE04 /* WelcomeViewController.swift */,
-				F0287F071E784BB40025FE04 /* RegisterViewController.swift */,
-				F0287F091E784BE00025FE04 /* LoginViewController.swift */,
-				F0287F0B1E78D4260025FE04 /* HomeViewController.swift */,
 				F0287EF91E783FF90025FE04 /* Main.storyboard */,
-				F0287EFC1E783FF90025FE04 /* Assets.xcassets */,
-				F0287EFE1E783FF90025FE04 /* LaunchScreen.storyboard */,
-				F0287F011E783FF90025FE04 /* Info.plist */,
 				F090A2751EA0116600F74682 /* UserProfile.swift */,
+				F0287EF71E783FF90025FE04 /* WelcomeViewController.swift */,
+				F0287F091E784BE00025FE04 /* LoginViewController.swift */,
+				F0287F071E784BB40025FE04 /* RegisterViewController.swift */,
+				F0287F0B1E78D4260025FE04 /* HomeViewController.swift */,
+				F0828FED1EA85884008505C8 /* SubmitWaterViewController.swift */,
+				F0908FAF1EA453A80074F8D6 /* ProfileViewController.swift */,
+				F06878CC1EAA967C001DBD54 /* EmailViewController.swift */,
+				F06878CE1EAA9687001DBD54 /* PassViewController.swift */,
+				F067C0391EA829E4003625D1 /* CustomSegue.swift */,
+				F06878C51EAA88F9001DBD54 /* UnwindCustomSegue.swift */,
+				F0287F011E783FF90025FE04 /* Info.plist */,
+				F0287EFE1E783FF90025FE04 /* LaunchScreen.storyboard */,
+				F0287EFC1E783FF90025FE04 /* Assets.xcassets */,
 			);
 			path = "#Thirsty";
 			sourceTree = "<group>";
@@ -116,6 +153,7 @@
 				F0287EF01E783FF90025FE04 /* Resources */,
 				7EF91A9ABB8405A3BA70583D /* [CP] Embed Pods Frameworks */,
 				28E53A7B77B4AAA595F3D106 /* [CP] Copy Pods Resources */,
+				F0828FEC1EA8579A008505C8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,7 +270,13 @@
 				F0287F0A1E784BE00025FE04 /* LoginViewController.swift in Sources */,
 				F090A2761EA0116600F74682 /* UserProfile.swift in Sources */,
 				F0287F081E784BB40025FE04 /* RegisterViewController.swift in Sources */,
+				F0908FB01EA453A80074F8D6 /* ProfileViewController.swift in Sources */,
+				F067C03A1EA829E4003625D1 /* CustomSegue.swift in Sources */,
 				F0287EF81E783FF90025FE04 /* WelcomeViewController.swift in Sources */,
+				F06878C61EAA88F9001DBD54 /* UnwindCustomSegue.swift in Sources */,
+				F0828FEE1EA85884008505C8 /* SubmitWaterViewController.swift in Sources */,
+				F06878CF1EAA9687001DBD54 /* PassViewController.swift in Sources */,
+				F06878CD1EAA967C001DBD54 /* EmailViewController.swift in Sources */,
 				F0287EF61E783FF90025FE04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,9 +18,11 @@ class WelcomeViewController: UIViewController {
     static var userProfile = UserProfile()
     static var rootDB: FIRDatabaseReference!
     static var userDB: FIRDatabaseReference!
-    static var purityDB: FIRDatabaseReference!
     static var sourceDB: FIRDatabaseReference!
+    static var purityDB: FIRDatabaseReference!
     var didRegisterSuccessfully = false
+    var didLogout = false
+    static var maxNum = -1
     
     
     override func viewDidLoad() {
@@ -49,6 +51,11 @@ class WelcomeViewController: UIViewController {
             ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(ac, animated: true)
             didRegisterSuccessfully = false
+        } else if didLogout {
+            let ac = UIAlertController(title: "Success", message: "Successfully Logged Out", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(ac, animated: true)
+            didLogout = false
         }
     }
     
@@ -74,14 +81,6 @@ class WelcomeViewController: UIViewController {
     @IBAction func registerSelected(_ sender: Any) {
         performSegue(withIdentifier: "registerSelectSegue", sender: sender)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-////        if segue.identifier == "loginSelectSegue" {
-////            let nav = segue.destination as! LoginViewController
-////        } else {
-////            let nav = segue.destination as! RegisterViewController
-////        }
-//    }
     
     @IBAction func unwindToWelcome(segue: UIStoryboardSegue) {
     }

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     private var loginSuccessful = false
     
@@ -19,17 +20,21 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.title = "Login"
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        usernameTextField.tag = 0
+        passwordTextField.tag = 1
     }
 
     @IBAction func loginRequested(_ sender: Any) {
         
         // need to query database
-        
+        //self.view.endEditing(true)
+        checkUserPass()
         loading()
-        delay(bySeconds: 1.5) {
+        LoginViewController.delay(bySeconds: 1.5) {
             if self.loginSuccessful {
                 self.loginSuccessful = false // might move to logout method
-                self.updateUserProfile()
                 self.performSegue(withIdentifier: "homePageSegue", sender: sender)
             } else {
                 let ac = UIAlertController(title: self.title, message: "Login failed. Please try again or register.", preferredStyle: .alert)
@@ -56,6 +61,9 @@ class LoginViewController: UIViewController {
             let nav = segue.destination as! RegisterViewController
             nav.cameFromLogin = true
             self.navigationItem.title = ""
+        } else if segue.identifier == "homePageSegue" {
+            let nav = segue.destination as! HomeViewController
+            nav.fromLogin = true
         }
     }
     
@@ -69,7 +77,6 @@ class LoginViewController: UIViewController {
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
         let when = DispatchTime.now() + 1
-        checkUserPass()
         DispatchQueue.main.asyncAfter(deadline: when){
             alert.dismiss(animated: true, completion: nil)
         }
@@ -81,6 +88,7 @@ class LoginViewController: UIViewController {
 //            print((snapshot.childSnapshot(forPath: "Password").value as! String))
             if snapshot.exists() && (snapshot.childSnapshot(forPath: "Password").value as! String) == self.passwordTextField.text! {
                 self.loginSuccessful = true
+                self.updateUserProfile()
             }
         })
     }
@@ -99,12 +107,12 @@ class LoginViewController: UIViewController {
         })
     }
     
-    public func delay(bySeconds seconds: Double, dispatchLevel: DispatchLevel = .main, closure: @escaping () -> Void) {
+    static func delay(bySeconds seconds: Double, dispatchLevel: DispatchLevel = .main, closure: @escaping () -> Void) {
         let dispatchTime = DispatchTime.now() + seconds
         dispatchLevel.dispatchQueue.asyncAfter(deadline: dispatchTime, execute: closure)
     }
     
-    public enum DispatchLevel {
+    enum DispatchLevel {
         case main, userInteractive, userInitiated, utility, background
         var dispatchQueue: DispatchQueue {
             switch self {
@@ -117,5 +125,15 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            loginButton.sendActions(for: UIControlEvents.touchUpInside)
+            return true;
+        }
+        return false
+    }
     
 }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D336999E0356FBD35F82002F4B4F62B248E7E5FF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6575E401F0E075B1FD6E179DAD8CCDF3853A7A8E" : 9223372036854775807,
+    "D336999E0356FBD35F82002F4B4F62B248E7E5FF" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AE56CBED-7E9A-47EA-B869-7B26B8C2BFC9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6575E401F0E075B1FD6E179DAD8CCDF3853A7A8E" : "%23Thirsty\/DropDown\/",
+    "D336999E0356FBD35F82002F4B4F62B248E7E5FF" : "%23Thirsty\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "#Thirsty",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "#Thirsty.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:AssistoLab\/DropDown.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6575E401F0E075B1FD6E179DAD8CCDF3853A7A8E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:OmarB97\/Thirsty.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D336999E0356FBD35F82002F4B4F62B248E7E5FF"
+    }
+  ]
+}
