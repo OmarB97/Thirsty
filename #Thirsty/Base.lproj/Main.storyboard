@@ -309,7 +309,6 @@ Report</string>
                                 </state>
                                 <connections>
                                     <action selector="submitReport:" destination="LUJ-j9-lNA" eventType="touchUpInside" id="MJ4-9U-K4G"/>
-                                    <segue destination="cGJ-eG-zJa" kind="show" id="Ze1-W2-NOc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-nT-BWJ">
@@ -446,11 +445,82 @@ Reports</string>
                     </view>
                     <connections>
                         <segue destination="gPv-BB-LFR" kind="show" identifier="profileSegue" id="1wG-Hp-gMI"/>
+                        <segue destination="cGJ-eG-zJa" kind="show" identifier="submitReportSegue" id="T2n-U6-pJ3"/>
+                        <segue destination="cSM-B3-GpC" kind="show" identifier="viewReportListSegue" id="1Wf-EK-UEV"/>
+                        <segue destination="OtV-0B-vLz" kind="show" identifier="historySegue" id="DrS-hw-jNA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKv-Og-Rsl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4989.6000000000004" y="788.45577211394311"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="u8I-xP-M4W">
+            <objects>
+                <viewController id="OtV-0B-vLz" customClass="HistoryViewController" customModule="_Thirsty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wuJ-y5-nfK"/>
+                        <viewControllerLayoutGuide type="bottom" id="a3I-7r-Ebu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kej-fx-vMM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETI-oe-Cpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3884" y="1254"/>
+        </scene>
+        <!--Report List View Controller-->
+        <scene sceneID="DoX-E5-WDq">
+            <objects>
+                <tableViewController id="cSM-B3-GpC" customClass="ReportListViewController" customModule="_Thirsty" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UHf-bh-jGu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.81960784313725488" green="1" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="66" id="Uni-nC-XnF">
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uni-nC-XnF" id="nJY-VY-DRA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.81960784313725488" green="1" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cSM-B3-GpC" id="5yU-gU-DP7"/>
+                            <outlet property="delegate" destination="cSM-B3-GpC" id="BY1-KV-1lu"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="414-Qt-cMe" kind="show" identifier="reportDetailSegue" id="RfT-Me-1iU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Lu-mQ-NHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4622" y="1950"/>
+        </scene>
+        <!--Report Detail View Controller-->
+        <scene sceneID="Klh-qm-Lb0">
+            <objects>
+                <viewController id="414-Qt-cMe" customClass="ReportDetailViewController" customModule="_Thirsty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JEt-K6-KvO"/>
+                        <viewControllerLayoutGuide type="bottom" id="x2y-ae-6QY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h6Q-Dr-JRi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJd-Rz-FIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4622" y="2756"/>
         </scene>
         <!--Submit Water View Controller-->
         <scene sceneID="hT4-OO-tB0">
@@ -546,7 +616,7 @@ Reports</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Waste Condition: N/A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-wv-Mwq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Water Condition: N/A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-wv-Mwq">
                                 <rect key="frame" x="16" y="345" width="165" height="107"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -611,7 +681,7 @@ Reports</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhd-3b-lsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6wy-fk-v0Y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6849" y="810"/>
+            <point key="canvasLocation" x="5382" y="1950"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="3vC-Ja-HVc">
@@ -706,7 +776,7 @@ Reports</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nx3-v1-7WS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BjT-B3-YKo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6850" y="-120"/>
+            <point key="canvasLocation" x="4990" y="-286"/>
         </scene>
         <!--Pass View Controller-->
         <scene sceneID="C8u-nm-rBL">
@@ -789,7 +859,7 @@ Reports</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjf-4w-RgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2o8-te-FfN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7740" y="170.46476761619192"/>
+            <point key="canvasLocation" x="5690" y="-985"/>
         </scene>
         <!--Email View Controller-->
         <scene sceneID="kqm-Hb-jYM">
@@ -850,7 +920,7 @@ Reports</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGc-xz-MC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EBO-17-eui" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7728.8000000000002" y="-554.57271364317842"/>
+            <point key="canvasLocation" x="4407" y="-984"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2TU-5e-6A9">

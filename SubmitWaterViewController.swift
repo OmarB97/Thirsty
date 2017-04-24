@@ -52,7 +52,7 @@ class SubmitWaterViewController: UIViewController, UITextFieldDelegate {
         //wasteDropDown.direction = .any
         wasteDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.waste = item
-            self.wasteLabel.text = "Current Waste Condition: \(item)"
+            self.wasteLabel.text = "Current Water Condition: \(item)"
         }
         wasteDropDown.show()
     }
@@ -71,9 +71,9 @@ class SubmitWaterViewController: UIViewController, UITextFieldDelegate {
         
         var keyNum = 0
         WelcomeViewController.sourceDB.observe(.value, with: { (snapshot) in
-            keyNum = Int(snapshot.childrenCount)
+            keyNum = Int(snapshot.childrenCount) + 1
         })
-        LoginViewController.delay(bySeconds: 0.2) {
+        LoginViewController.delay(bySeconds: 0.25) {
             let waterReport = WelcomeViewController.sourceDB.child(String(keyNum))
             let swiftDate = Date()
             let calendar = Calendar.current
@@ -86,7 +86,7 @@ class SubmitWaterViewController: UIViewController, UITextFieldDelegate {
             let year = calendar.component(.year, from: swiftDate)
             
             let dateInfo = ["date": date, "weekday": weekday, "hours": hours, "minutes": minutes, "months": months, "seconds": seconds, "year": year]
-            let reportInfo = ["latitude":  latNum, "longitude": lonNum, "reportNum": keyNum, "reporter": WelcomeViewController.userProfile.username!, "waterCondition": self.water!, "wasteCondition": self.waste!] as [String : Any]
+            let reportInfo = ["latitude":  latNum, "longitude": lonNum, "reportNum": keyNum, "reporter": WelcomeViewController.userProfile.username!, "waterType": self.water!, "waterCondition": self.waste!] as [String : Any]
             waterReport.setValue(reportInfo)
             
             let dateChild = waterReport.child("date")

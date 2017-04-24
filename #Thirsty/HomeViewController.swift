@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 
 class HomeViewController: UIViewController {
     
     var fromLogin = false
     var didSubmitWater = false
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func submitReport(_ sender: Any) {
+        performSegue(withIdentifier: "submitReportSegue", sender: sender)
     }
     
     @IBAction func submitPurityReport(_ sender: Any) {
@@ -51,6 +54,24 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func viewReports(_ sender: Any) {
+        WelcomeViewController.sourceDB.observe(.value, with: { (snapshot) in
+            var listOfReports: [[Int: Dictionary<String, Any>]] = []
+            for childSnap in snapshot.children.allObjects {
+                let snap = childSnap as! FIRDataSnapshot
+                let reportNum = Int(snap.key)!
+                let value = snap.value as! NSDictionary
+                let date = value["date"] as! NSDictionary
+                var valueDict = value as! Dictionary<String, Any>
+                let dateDict = date as! Dictionary<String, Any>
+                valueDict["date"] = dateDict
+                let report: [Int: Dictionary<String, Any>] = [reportNum: valueDict]
+                listOfReports.append(report)
+            }
+            ReportListViewController.waterReports = listOfReports
+        })
+        LoginViewController.delay(bySeconds: 0.2) {
+            self.performSegue(withIdentifier: "viewReportListSegue", sender: sender)
+        }
     }
     
     

@@ -20,6 +20,10 @@
 		F06878C61EAA88F9001DBD54 /* UnwindCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878C51EAA88F9001DBD54 /* UnwindCustomSegue.swift */; };
 		F06878CD1EAA967C001DBD54 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878CC1EAA967C001DBD54 /* EmailViewController.swift */; };
 		F06878CF1EAA9687001DBD54 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878CE1EAA9687001DBD54 /* PassViewController.swift */; };
+		F06878D31EABBFB8001DBD54 /* ReportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878D21EABBFB8001DBD54 /* ReportListViewController.swift */; };
+		F06878D51EABF22E001DBD54 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06878D41EABF22E001DBD54 /* Charts.framework */; };
+		F06878D71EABF2AF001DBD54 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878D61EABF2AF001DBD54 /* HistoryViewController.swift */; };
+		F06878D91EABF2E4001DBD54 /* ReportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06878D81EABF2E4001DBD54 /* ReportDetailViewController.swift */; };
 		F0828FEA1EA8579A008505C8 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0828FE91EA8579A008505C8 /* DropDown.framework */; };
 		F0828FEB1EA8579A008505C8 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0828FE91EA8579A008505C8 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0828FEE1EA85884008505C8 /* SubmitWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0828FED1EA85884008505C8 /* SubmitWaterViewController.swift */; };
@@ -60,6 +64,10 @@
 		F06878C51EAA88F9001DBD54 /* UnwindCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindCustomSegue.swift; sourceTree = "<group>"; };
 		F06878CC1EAA967C001DBD54 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		F06878CE1EAA9687001DBD54 /* PassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
+		F06878D21EABBFB8001DBD54 /* ReportListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportListViewController.swift; sourceTree = "<group>"; };
+		F06878D41EABF22E001DBD54 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/#Thirsty-ezxewpsygdweoteevrconedffefg/Build/Products/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
+		F06878D61EABF2AF001DBD54 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		F06878D81EABF2E4001DBD54 /* ReportDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDetailViewController.swift; sourceTree = "<group>"; };
 		F0828FE91EA8579A008505C8 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0828FED1EA85884008505C8 /* SubmitWaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubmitWaterViewController.swift; path = ../SubmitWaterViewController.swift; sourceTree = "<group>"; };
 		F0908FAF1EA453A80074F8D6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06878D51EABF22E001DBD54 /* Charts.framework in Frameworks */,
 				46D0DFEC5DA28AEAF08AD5C1 /* Pods__Thirsty.framework in Frameworks */,
 				F0828FEA1EA8579A008505C8 /* DropDown.framework in Frameworks */,
 			);
@@ -83,6 +92,7 @@
 		839EE8451ABBAEB71B64DBBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F06878D41EABF22E001DBD54 /* Charts.framework */,
 				F0828FE91EA8579A008505C8 /* DropDown.framework */,
 				DF68520AB9C60040B8F35746 /* Pods__Thirsty.framework */,
 			);
@@ -128,6 +138,9 @@
 				F0287F071E784BB40025FE04 /* RegisterViewController.swift */,
 				F0287F0B1E78D4260025FE04 /* HomeViewController.swift */,
 				F0828FED1EA85884008505C8 /* SubmitWaterViewController.swift */,
+				F06878D21EABBFB8001DBD54 /* ReportListViewController.swift */,
+				F06878D81EABF2E4001DBD54 /* ReportDetailViewController.swift */,
+				F06878D61EABF2AF001DBD54 /* HistoryViewController.swift */,
 				F0908FAF1EA453A80074F8D6 /* ProfileViewController.swift */,
 				F06878CC1EAA967C001DBD54 /* EmailViewController.swift */,
 				F06878CE1EAA9687001DBD54 /* PassViewController.swift */,
@@ -267,9 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0287F0C1E78D4260025FE04 /* HomeViewController.swift in Sources */,
+				F06878D31EABBFB8001DBD54 /* ReportListViewController.swift in Sources */,
 				F0287F0A1E784BE00025FE04 /* LoginViewController.swift in Sources */,
 				F090A2761EA0116600F74682 /* UserProfile.swift in Sources */,
 				F0287F081E784BB40025FE04 /* RegisterViewController.swift in Sources */,
+				F06878D71EABF2AF001DBD54 /* HistoryViewController.swift in Sources */,
+				F06878D91EABF2E4001DBD54 /* ReportDetailViewController.swift in Sources */,
 				F0908FB01EA453A80074F8D6 /* ProfileViewController.swift in Sources */,
 				F067C03A1EA829E4003625D1 /* CustomSegue.swift in Sources */,
 				F0287EF81E783FF90025FE04 /* WelcomeViewController.swift in Sources */,
