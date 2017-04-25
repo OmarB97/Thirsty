@@ -9,5 +9,7 @@ target '#Thirsty' do
 	pod ‘Firebase/Core’
     pod 'Firebase/Database'
     pod 'Charts'
+    pod 'GoogleMaps'
+    pod 'IQKeyboardManagerSwift'
 
 end

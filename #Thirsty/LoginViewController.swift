@@ -83,9 +83,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func checkUserPass() {
-        WelcomeViewController.userDB.child(usernameTextField.text!).observeSingleEvent(of: .value, with: { snapshot in
-//            print(snapshot.exists())
-//            print((snapshot.childSnapshot(forPath: "Password").value as! String))
+        WelcomeViewController.userDB.child(usernameTextField.text!).observe(.value, with: { snapshot in
             if snapshot.exists() && (snapshot.childSnapshot(forPath: "Password").value as! String) == self.passwordTextField.text! {
                 self.loginSuccessful = true
                 self.updateUserProfile()

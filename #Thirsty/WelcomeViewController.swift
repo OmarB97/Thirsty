@@ -13,6 +13,8 @@ import FirebaseDatabase
 
 class WelcomeViewController: UIViewController {
     
+    // remember to account for '.' '#' '$' '[' or ']' in text fields!
+    
     private typealias `Self` = WelcomeViewController
     
     static var userProfile = UserProfile()

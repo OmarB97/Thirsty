@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
@@ -52,7 +53,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         } else if passwordTextField.text != confirmPassTextField.text {
             displayError(for: confirmPassTextField, error: "Password fields do not match.")
         } else {
-            performSegue(withIdentifier: "unwindToWelcomeSegue", sender: sender)
+            var exists = false
+            WelcomeViewController.userDB.observe(.value, with: { (snapshot) in
+                for childSnap in snapshot.children.allObjects {
+                    let snap = childSnap as! FIRDataSnapshot
+                    if snap.key == self.usernameTextField.text! {
+                        exists = true
+                    }
+                }
+            })
+            LoginViewController.delay(bySeconds: 0.25) {
+                if !exists {
+                    self.performSegue(withIdentifier: "unwindToWelcomeSegue", sender: sender)
+                } else {
+                    self.displayError(for: self.usernameTextField, error: "Username is already taken.")
+                }
+            }
         }
     }
     

@@ -10,8 +10,17 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var welcomeLabel: UILabel!
     var didUpdateEmail = false
     var didUpdatePass = false
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        welcomeLabel.text = "Hello, \(String(describing: WelcomeViewController.userProfile.username!))"
+        infoLabel.text = "Your email is currently set as \(String(describing: WelcomeViewController.userProfile.email!)) and your user type is \(String(describing: WelcomeViewController.userProfile.userType!))."
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

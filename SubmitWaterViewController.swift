@@ -66,6 +66,10 @@ class SubmitWaterViewController: UIViewController, UITextFieldDelegate {
                 displayError(for: latitudeField, error: "Invalid latitude and longitude coordinates.")
                 return
             }
+        if latNum < -90 || latNum > 90 || lonNum < -180 || lonNum > 180 {
+            displayError(for: nil, error: "Please enter a valid latitude and longitude range.")
+            return
+        }
         // add to database
         // return back to home page
         

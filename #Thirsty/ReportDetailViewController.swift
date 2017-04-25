@@ -10,6 +10,12 @@ import UIKit
 
 class ReportDetailViewController: UIViewController {
     
+    @IBOutlet weak var reportLabel: UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var waterTypeLabel: UILabel!
+    @IBOutlet weak var waterConditionLabel: UILabel!
+    
     var reportNum: Int!
     var reporter: String!
     var latitude: Double!
@@ -19,9 +25,11 @@ class ReportDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(reportNum, reporter, latitude, longitude, waterType, waterCondition)
-
-        // Do any additional setup after loading the view.
+        reportLabel.text = "Report #\(reportNum!) created by \(reporter!)"
+        latitudeLabel.text = "Latitude: \(String(format: "%.1f", latitude!))"
+        longitudeLabel.text = "Longitude: \(String(format: "%.1f", longitude!))"
+        waterTypeLabel.text = "Water Type: \(waterType!)"
+        waterConditionLabel.text = "Water Condition: \(waterCondition!)"
     }
     
 }

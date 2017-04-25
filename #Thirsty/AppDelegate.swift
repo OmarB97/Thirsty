@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import DropDown
+import GoogleMaps
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         DropDown.startListeningToKeyboard()
+        GMSServices.provideAPIKey("AIzaSyDk63XTwQA_8eA8nXCK6kU1Vks_hWl4jBs")
+        IQKeyboardManager.sharedManager().enable = true
         return true
     }
 
