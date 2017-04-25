@@ -62,7 +62,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             })
-            LoginViewController.delay(bySeconds: 0.25) {
+            LoginViewController.delay(bySeconds: 0.5) {
                 if !exists {
                     self.performSegue(withIdentifier: "unwindToWelcomeSegue", sender: sender)
                 } else {

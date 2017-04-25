@@ -77,7 +77,7 @@ class SubmitWaterViewController: UIViewController, UITextFieldDelegate {
         WelcomeViewController.sourceDB.observe(.value, with: { (snapshot) in
             keyNum = Int(snapshot.childrenCount) + 1
         })
-        LoginViewController.delay(bySeconds: 0.25) {
+        LoginViewController.delay(bySeconds: 0.5) {
             let waterReport = WelcomeViewController.sourceDB.child(String(keyNum))
             let swiftDate = Date()
             let calendar = Calendar.current

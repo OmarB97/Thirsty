@@ -68,7 +68,7 @@ class HomeViewController: UIViewController {
             }
             PurityListViewController.purityReports = listOfReports
         })
-        LoginViewController.delay(bySeconds: 0.2) {
+        LoginViewController.delay(bySeconds: 0.5) {
             self.performSegue(withIdentifier: "purityListSegue", sender: sender)
         }
     }
@@ -78,7 +78,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func submitPurityReport(_ sender: Any) {
-        if WelcomeViewController.userProfile.userType != "Worker" || WelcomeViewController.userProfile.userType != "Manager" {
+        if WelcomeViewController.userProfile.userType != "Worker" && WelcomeViewController.userProfile.userType != "Manager" {
             let ac = UIAlertController(title: "Denied Access", message: "Only Workers can submit Purity Reports.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(ac, animated: true)
@@ -104,7 +104,7 @@ class HomeViewController: UIViewController {
             }
             MapViewController.waterReports = listOfReports
         })
-        LoginViewController.delay(bySeconds: 0.2) {
+        LoginViewController.delay(bySeconds: 0.5) {
             self.performSegue(withIdentifier: "mapSegue", sender: sender)
         }
     }
@@ -125,7 +125,7 @@ class HomeViewController: UIViewController {
             }
             ReportListViewController.waterReports = listOfReports
         })
-        LoginViewController.delay(bySeconds: 0.2) {
+        LoginViewController.delay(bySeconds: 0.5) {
             self.performSegue(withIdentifier: "viewReportListSegue", sender: sender)
         }
     }
@@ -152,7 +152,7 @@ class HomeViewController: UIViewController {
             }
             HistoryViewController.purityReports = listOfReports
         })
-        LoginViewController.delay(bySeconds: 0.25) {
+        LoginViewController.delay(bySeconds: 0.5) {
             self.performSegue(withIdentifier: "historySegue", sender: sender)
         }
     }
