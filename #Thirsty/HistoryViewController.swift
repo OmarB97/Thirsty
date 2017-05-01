@@ -88,7 +88,7 @@ class HistoryViewController: UIViewController, UITextFieldDelegate {
             displayError(for: nil, error: "One or more fields are empty.")
             return
         }
-        guard let latNum = Double(latitudeField.text!), let lonNum = Double(longitudeField.text!), let yearNum = Int(yearField.text!) else {
+        guard let latNum = Double(latitudeField.text!.trimmingCharacters(in: .whitespaces)), let lonNum = Double(longitudeField.text!.trimmingCharacters(in: .whitespaces)), let yearNum = Int(yearField.text!) else {
             displayError(for: latitudeField, error: "Invalid latitude and longitude coordinates, or year is incorrect.")
             return
         }

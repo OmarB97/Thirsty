@@ -54,7 +54,7 @@ class SubmitPurityViewController: UIViewController, UITextFieldDelegate {
             displayError(for: nil, error: "One or more fields are empty.")
             return
         }
-        guard let latNum = Double(latitudeField.text!), let lonNum = Double(longitudeField.text!), let virusNum = Double(virusField.text!), let contaminantNum = Double(contaminantField.text!) else {
+        guard let latNum = Double(latitudeField.text!), let lonNum = Double(longitudeField.text!.trimmingCharacters(in: .whitespaces)), let virusNum = Double(virusField.text!.trimmingCharacters(in: .whitespaces)), let contaminantNum = Double(contaminantField.text!.trimmingCharacters(in: .whitespaces)) else {
             displayError(for: latitudeField, error: "Invalid latitude and longitude coordinates.")
             return
         }
@@ -67,7 +67,7 @@ class SubmitPurityViewController: UIViewController, UITextFieldDelegate {
         // return back to home page
         
         var keyNum = 0
-        WelcomeViewController.sourceDB.observe(.value, with: { (snapshot) in
+        WelcomeViewController.purityDB.observe(.value, with: { (snapshot) in
             keyNum = Int(snapshot.childrenCount) + 1
         })
         LoginViewController.delay(bySeconds: 0.5) {

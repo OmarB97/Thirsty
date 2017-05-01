@@ -125,7 +125,7 @@ class HomeViewController: UIViewController {
             }
             ReportListViewController.waterReports = listOfReports
         })
-        LoginViewController.delay(bySeconds: 0.5) {
+        LoginViewController.delay(bySeconds: 1.0) {
             self.performSegue(withIdentifier: "viewReportListSegue", sender: sender)
         }
     }

@@ -62,7 +62,7 @@ class SubmitWaterViewController: UIViewController, UITextFieldDelegate {
             displayError(for: nil, error: "One or more fields are empty.")
             return
         }
-        guard let latNum = Double(latitudeField.text!), let lonNum = Double(longitudeField.text!) else {
+        guard let latNum = Double(latitudeField.text!.trimmingCharacters(in: .whitespaces)), let lonNum = Double(longitudeField.text!.trimmingCharacters(in: .whitespaces)) else {
                 displayError(for: latitudeField, error: "Invalid latitude and longitude coordinates.")
                 return
             }
@@ -77,7 +77,7 @@ class SubmitWaterViewController: UIViewController, UITextFieldDelegate {
         WelcomeViewController.sourceDB.observe(.value, with: { (snapshot) in
             keyNum = Int(snapshot.childrenCount) + 1
         })
-        LoginViewController.delay(bySeconds: 0.5) {
+        LoginViewController.delay(bySeconds: 1.0) {
             let waterReport = WelcomeViewController.sourceDB.child(String(keyNum))
             let swiftDate = Date()
             let calendar = Calendar.current
